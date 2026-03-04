@@ -30,7 +30,7 @@ jobs:
       run: npm test 2>/dev/null || echo "No tests configured"
     
     - name: Build
-      run: npm run build
+      run: npm ci
     
     - name: Build Docker image
       run: docker build -t simple-calculator .
