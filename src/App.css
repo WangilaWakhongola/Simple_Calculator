@@ -1,6 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .calculator-btn {
   @apply bg-gray-100 text-gray-800 font-bold py-4 rounded-lg hover:bg-gray-200 transition text-lg active:scale-95;
