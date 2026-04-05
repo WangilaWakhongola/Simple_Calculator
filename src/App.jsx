@@ -35,6 +35,13 @@ export default function Calculator() {
       setPreviousValue(currentValue);
     } else if (operation) {
       const result = calculate(previousValue, currentValue, operation);
+      if (result === 'Error') {
+        setDisplay('Error');
+        setPreviousValue(null);
+        setOperation(null);
+        setWaitingForNewValue(false);
+        return;
+      }
       setDisplay(String(result));
       setPreviousValue(result);
     }
@@ -53,6 +60,7 @@ export default function Calculator() {
       case '×':
         return prev * current;
       case '÷':
+        if (current === 0) return 'Error';
         return prev / current;
       default:
         return current;
@@ -64,6 +72,13 @@ export default function Calculator() {
     if (operation && previousValue !== null) {
       const currentValue = parseFloat(display);
       const result = calculate(previousValue, currentValue, operation);
+      if (result === 'Error') {
+        setDisplay('Error');
+        setPreviousValue(null);
+        setOperation(null);
+        setWaitingForNewValue(false);
+        return;
+      }
       setDisplay(String(result));
       setPreviousValue(null);
       setOperation(null);
@@ -107,7 +122,7 @@ export default function Calculator() {
 
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [display, operation, previousValue]);
+  }, [display, operation, previousValue, waitingForNewValue]);
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-500 to-purple-600">
