@@ -1,8 +1,8 @@
-# 🧮 Simple Calculator
+# Simple Calculator
 
 A lightweight, fast, and beautiful calculator application built with React.
 
-## ✨ Features
+## Features
 
 - ➕ Basic arithmetic operations (Add, Subtract, Multiply, Divide)
 - 🎯 Clear and reset functions
@@ -12,7 +12,7 @@ A lightweight, fast, and beautiful calculator application built with React.
 - 📦 Lightweight and fast
 - 🧪 Unit tested
 
-## 🚀 Quick Start
+## Quick Start
 
 ### With Docker
 
@@ -35,14 +35,14 @@ npm run dev
 npm run build
 ```
 
-## 📋 Usage
+## Usage
 
 1. **Enter numbers** - Click buttons or type on keyboard
 2. **Choose operation** - Click +, -, ×, ÷
 3. **Press equals** - See the result
 4. **Clear** - Reset calculator
 
-## 🎯 Operations
+## Operations
 
 | Operation | Symbol | Keyboard |
 |-----------|--------|----------|
@@ -60,7 +60,7 @@ npm run build
 - Vite
 - Docker
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 simple-calculator/
